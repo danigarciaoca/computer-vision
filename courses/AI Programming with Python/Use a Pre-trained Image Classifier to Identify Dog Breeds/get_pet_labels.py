@@ -17,7 +17,7 @@
 #
 ##
 # Imports python modules
-from os import listdir
+from os import listdir, path
 
 # TODO 2: Define get_pet_labels function below please be certain to replace None
 #       in the return statement with results_dic dictionary that you create
@@ -46,30 +46,33 @@ def get_pet_labels(image_dir):
     results_dic = {}
 
     for filename in filename_list:
-        if filename not in results_dic:
-            # Sets string to lower case letters
-            low_filename = filename.lower()
+        # Skips file if starts with . (like .DS_Store of Mac OSX) because it isn't an pet image file (i.e.: ignore
+        # hidden files (those that start with a dot '.')
+        if filename[0] != ".":
+            if filename not in results_dic:
+                # Removes file extension and sets string to lower case letters
+                low_filename = path.splitext(filename)[0].lower()
 
-            # Splits lower case string by _ to break into words
-            word_list_filename = low_filename.split('_')
+                # Splits lower case string by _ to break into words
+                word_list_filename = low_filename.split('_')
 
-            # Create pet_name starting as empty string
-            pet_image_label = ""
+                # Create pet_name starting as empty string
+                pet_image_label = ""
 
-            # Loops to check if word in pet name is only alphabetic characters - if true append word to pet_name
-            # separated by trailing space
-            for word in word_list_filename:
-                if word.isalpha():
-                    pet_image_label += word + " "
+                # Loops to check if word in pet name is only alphabetic characters - if true append word to pet_name
+                # separated by trailing space
+                for word in word_list_filename:
+                    if word.isalpha():
+                        pet_image_label += word + " "
 
-            # Strip off starting/trailing whitespace characters
-            pet_image_label = pet_image_label.strip()
+                # Strip off starting/trailing whitespace characters
+                pet_image_label = pet_image_label.strip()
 
-            # Adds new key-value pairs to dictionary ONLY when key doesn't already exist. This dictionary's value is
-            # a List that contains only one item - the pet image label
-            results_dic[filename] = [pet_image_label]
-        else:
-            print("** Warning: Key=", filename, "already exists in results_dic"
-                  "with value =", results_dic[filename])
+                # Adds new key-value pairs to dictionary ONLY when key doesn't already exist. This dictionary's value is
+                # a List that contains only one item - the pet image label
+                results_dic[filename] = [pet_image_label]
+            else:
+                print("** Warning: Key=", filename, "already exists in results_dic"
+                      "with value =", results_dic[filename])
 
     return results_dic
