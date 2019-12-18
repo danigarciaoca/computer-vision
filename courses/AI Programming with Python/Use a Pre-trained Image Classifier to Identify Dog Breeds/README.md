@@ -1,4 +1,31 @@
-## 1. Image Classification for a City Dog Show
+## 1. Batch Processing ```check_images.py```
+The main script will be ```check_images.py```
+
+### Directions for Running check_images.py using all 3 Model Architectures (pet_images folder)
+To get the output, you will have to run it on all 3 models (VGG, AlexNet and ResNet) to classify the fourty (40) images in the pet_images folder. To do this you will be calling the following shell script that will output the following results files:
+
+- resnet_pet-images.txt - that contains the results using CNN model architecture ResNet
+- alexnet_pet-images.txt - that contains the results using CNN model architecture AlexNet
+- vgg_pet-images.txt - that contains the results using CNN model architecture VGG
+
+The shell script file is **run_models_batch.sh**, and it can be run by typing the following on a terminal window:
+```sh
+sh run_models_batch.sh
+```
+
+### Directions for Running check_images.py using all 3 Model Architectures (uploaded_images folder)
+To get the output, you will have to run it on all 3 models (VGG, AlexNet and ResNet) to classify the five (5) images in the uploaded_images folder. To do this you will be calling the following shell script that will output the following results files:
+
+- resnet_uploaded-images.txt - that contains the results using CNN model architecture ResNet
+- alexnet_uploaded-images.txt - that contains the results using CNN model architecture AlexNet
+- vgg_uploaded-images.txt - that contains the results using CNN model architecture VGG
+
+The shell script file is **run_models_batch_uploaded.sh**, and it can be run by typing the following on a terminal window:
+```sh
+sh run_models_batch_uploaded.sh
+```
+
+## 2. Project Description: Image Classification for a City Dog Show
 ### Project Goal
 - Improving your programming skills using ```Python```.
 
@@ -25,30 +52,3 @@ For this image classification task you will be using an image classification app
 We have provided you with a **_classifier function_** in ```classifier.py``` that will allow you to use these CNNs to classify your images. The ```test_classifier.py``` file contains an example program that demonstrates how to use the **_classifier function._** For this project, you will be focusing on using your Python skills to complete these tasks using the classifier function; in the Neural Networks lesson you will be learning more about how these algorithms work.
 
 Remember that certain breeds of dog look very similar. The more images of two similar looking dog breeds that the algorithm has _learned_ from, the more likely the algorithm will be able to distinguish between those two breeds. We have found the following breeds to look very similar: Great Pyrenees and Kuvasz, German Shepherd and Malinois, Beagle and Walker Hound, amongst others.
-
-## 2. Batch Processing ```check_images.py```
-The main script will be ```check_images.py```
-
-### Directions for Running check_images.py using all 3 Model Architectures (pet_images folder)
-To get the output, you will have to run it on all 3 models (VGG, AlexNet and ResNet) to classify the fourty (40) images in the pet_images folder. To do this you will be calling the following shell script that will output the following results files:
-
-- resnet_pet-images.txt - that contains the results using CNN model architecture ResNet
-- alexnet_pet-images.txt - that contains the results using CNN model architecture AlexNet
-- vgg_pet-images.txt - that contains the results using CNN model architecture VGG
-
-The shell script file is **run_models_batch.sh**, and it can be run by typing the following on a terminal window:
-```sh
-sh run_models_batch.sh
-```
-
-### Directions for Running check_images.py using all 3 Model Architectures (uploaded_images folder)
-To get the output, you will have to run it on all 3 models (VGG, AlexNet and ResNet) to classify the five (5) images in the uploaded_images folder. To do this you will be calling the following shell script that will output the following results files:
-
-- resnet_uploaded-images.txt - that contains the results using CNN model architecture ResNet
-- alexnet_uploaded-images.txt - that contains the results using CNN model architecture AlexNet
-- vgg_uploaded-images.txt - that contains the results using CNN model architecture VGG
-
-The shell script file is **run_models_batch_uploaded.sh**, and it can be run by typing the following on a terminal window:
-```sh
-sh run_models_batch_uploaded.sh
-```
