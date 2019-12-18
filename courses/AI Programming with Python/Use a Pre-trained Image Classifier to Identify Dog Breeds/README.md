@@ -24,7 +24,7 @@ For this image classification task you will be using an image classification app
 
 We have provided you with a **_classifier function_** in ```classifier.py``` that will allow you to use these CNNs to classify your images. The ```test_classifier.py``` file contains an example program that demonstrates how to use the **_classifier function._** For this project, you will be focusing on using your Python skills to complete these tasks using the classifier function; in the Neural Networks lesson you will be learning more about how these algorithms work.
 
-Remember that certain breeds of dog look very similar. The more images of two similar looking dog breeds that the algorithm has learned from, the more likely the algorithm will be able to distinguish between those two breeds. We have found the following breeds to look very similar: Great Pyrenees and Kuvasz, German Shepherd and Malinois, Beagle and Walker Hound, amongst others.
+Remember that certain breeds of dog look very similar. The more images of two similar looking dog breeds that the algorithm has _learned_ from, the more likely the algorithm will be able to distinguish between those two breeds. We have found the following breeds to look very similar: Great Pyrenees and Kuvasz, German Shepherd and Malinois, Beagle and Walker Hound, amongst others.
 
 ## Batch Processing check_images.py
 The main script will be check_images.py
