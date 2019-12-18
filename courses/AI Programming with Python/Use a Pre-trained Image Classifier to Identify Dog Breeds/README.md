@@ -1,4 +1,4 @@
-## Image Classification for a City Dog Show
+## 1. Image Classification for a City Dog Show
 ### Project Goal
 - Improving your programming skills using ```Python```
 
@@ -26,7 +26,7 @@ We have provided you with a **_classifier function_** in ```classifier.py``` tha
 
 Remember that certain breeds of dog look very similar. The more images of two similar looking dog breeds that the algorithm has _learned_ from, the more likely the algorithm will be able to distinguish between those two breeds. We have found the following breeds to look very similar: Great Pyrenees and Kuvasz, German Shepherd and Malinois, Beagle and Walker Hound, amongst others.
 
-## Batch Processing check_images.py
+## 2. Batch Processing check_images.py
 The main script will be check_images.py
 
 ### Directions for Running check_images.py using all 3 Model Architectures (pet_images folder)
